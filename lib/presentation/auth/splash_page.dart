@@ -13,15 +13,14 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
-    Future.delayed(
-      const Duration(seconds: 3),
-      () => Navigator.pushReplacement(
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => const LoginPage(),
         ),
-      ),
-    );
+      );
+    });
 
     return Scaffold(
       body: Center(

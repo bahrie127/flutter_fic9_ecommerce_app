@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fic9_ecommerce_app/presentation/account/account_page.dart';
+import 'package:flutter_fic9_ecommerce_app/presentation/home/home_page.dart';
 
 import '../../common/constants/colors.dart';
 import '../../common/constants/images.dart';
@@ -14,12 +16,12 @@ class _DashboardPageState extends State<DashboardPage> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    const Center(child: Text('Home Page')),
+    const HomePage(),
     const Center(
       child: Text('Explore Page'),
     ),
     const Center(child: Text('Cart Page')),
-    const Center(child: Text('Account Page')),
+    const AccountPage(),
   ];
 
   void _onItemTapped(int index) {
