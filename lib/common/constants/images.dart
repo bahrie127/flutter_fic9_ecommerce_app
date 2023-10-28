@@ -26,4 +26,5 @@ class Images {
   static const String fashion3 = 'assets/images/fashion3.png';
 
   static const String more = 'assets/images/more.png';
+  static const String iconTrash = 'assets/icons/Trash.png';
 }
