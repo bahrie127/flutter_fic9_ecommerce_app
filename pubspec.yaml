@@ -28,6 +28,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  awesome_dialog: ^3.1.0
+  badges: ^3.1.2
   carousel_slider: ^4.2.1
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1
@@ -38,7 +40,7 @@ dependencies:
   http: ^1.1.0
   intl: ^0.18.1
   shared_preferences: ^2.2.2
-  badges: ^3.1.2
+  webview_flutter: ^4.4.1
 
 dev_dependencies:
   build_runner: ^2.4.6
