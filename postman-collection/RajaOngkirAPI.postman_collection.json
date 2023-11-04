@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "d99a55e4-48a3-4fd6-9073-6419a8b4c056",
+		"name": "RajaOngkirAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3117985",
+		"_collection_link": "https://bold-satellite-2123.postman.co/workspace/New-Team-Workspace~82ebd54c-ab06-414e-a28c-44644a99c1b6/collection/3117985-d99a55e4-48a3-4fd6-9073-6419a8b4c056?action=share&source=collection_link&creator=3117985"
+	},
+	"item": [
+		{
+			"name": "Province",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "APIKEMU359fafde97f03ee2be60147b2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/province",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"province"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "City by prov id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "APIKEMU359fafde97f03ee2be60147b2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/city?province=5",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"city"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "39",
+							"disabled": true
+						},
+						{
+							"key": "province",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "City by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "APIKEMU359fafde97f03ee2be60147b2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/city?id=39&province=5",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"city"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "39"
+						},
+						{
+							"key": "province",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kecamatan by city id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "APIKEMU359fafde97f03ee2be60147b2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/subdistrict?city=419",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"subdistrict"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "419"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kecamatan by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "APIKEMU359fafde97f03ee2be60147b2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/subdistrict?city=40",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"subdistrict"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "40"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cost kecamatan to kecamatan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "key",
+						"value": "APIKEMU359fafde97f03ee2be60147b2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "origin",
+							"value": "5779",
+							"type": "text"
+						},
+						{
+							"key": "originType",
+							"value": "subdistrict",
+							"type": "text"
+						},
+						{
+							"key": "destination",
+							"value": "2103",
+							"type": "text"
+						},
+						{
+							"key": "destinationType",
+							"value": "subdistrict",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "500",
+							"type": "text"
+						},
+						{
+							"key": "courier",
+							"value": "jne",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/cost",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"cost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cek resi",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "key",
+						"value": "a9da3c4359fafde97f03ee2be60147b2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "waybill",
+							"value": "P2310250148600",
+							"type": "text"
+						},
+						{
+							"key": "courier",
+							"value": "pos",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/waybill",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"waybill"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
