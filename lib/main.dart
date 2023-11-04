@@ -4,13 +4,20 @@ import 'package:flutter_fic9_ecommerce_app/data/datasources/auth_local_datasourc
 import 'package:flutter_fic9_ecommerce_app/presentation/auth/login_page.dart';
 import 'package:flutter_fic9_ecommerce_app/presentation/auth/splash_page.dart';
 import 'package:flutter_fic9_ecommerce_app/presentation/cart/bloc/cart/cart_bloc.dart';
+import 'package:flutter_fic9_ecommerce_app/presentation/cart/bloc/get_cost/get_cost_bloc.dart';
 import 'package:flutter_fic9_ecommerce_app/presentation/cart/bloc/order/order_bloc.dart';
 import 'package:flutter_fic9_ecommerce_app/presentation/dashboard/dashboard_page.dart';
 import 'package:flutter_fic9_ecommerce_app/presentation/home/bloc/products/products_bloc.dart';
 import 'package:flutter_fic9_ecommerce_app/presentation/payment/bloc/order_detail/order_detail_bloc.dart';
+import 'package:flutter_fic9_ecommerce_app/presentation/shipping_address/bloc/add_address/add_address_bloc.dart';
+
+import 'package:flutter_fic9_ecommerce_app/presentation/shipping_address/bloc/city/city_bloc.dart';
+import 'package:flutter_fic9_ecommerce_app/presentation/shipping_address/bloc/get_address/get_address_bloc.dart';
+import 'package:flutter_fic9_ecommerce_app/presentation/shipping_address/bloc/province/province_bloc.dart';
 
 import 'presentation/auth/bloc/login/login_bloc.dart';
 import 'presentation/auth/bloc/register/register_bloc.dart';
+import 'presentation/shipping_address/bloc/subdistrict/subdistrict_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,6 +48,24 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => OrderDetailBloc(),
+        ),
+        BlocProvider(
+          create: (context) => ProvinceBloc(),
+        ),
+        BlocProvider(
+          create: (context) => CityBloc(),
+        ),
+        BlocProvider(
+          create: (context) => SubdistrictBloc(),
+        ),
+        BlocProvider(
+          create: (context) => AddAddressBloc(),
+        ),
+        BlocProvider(
+          create: (context) => GetAddressBloc(),
+        ),
+         BlocProvider(
+          create: (context) => GetCostBloc(),
         ),
       ],
       child: MaterialApp(
