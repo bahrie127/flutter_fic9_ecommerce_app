@@ -8,6 +8,8 @@ import 'package:flutter_fic9_ecommerce_app/presentation/cart/bloc/get_cost/get_c
 import 'package:flutter_fic9_ecommerce_app/presentation/cart/bloc/order/order_bloc.dart';
 import 'package:flutter_fic9_ecommerce_app/presentation/dashboard/dashboard_page.dart';
 import 'package:flutter_fic9_ecommerce_app/presentation/home/bloc/products/products_bloc.dart';
+import 'package:flutter_fic9_ecommerce_app/presentation/order/bloc/buyer_order/buyer_order_bloc.dart';
+import 'package:flutter_fic9_ecommerce_app/presentation/order/bloc/cek_resi/cek_resi_bloc.dart';
 import 'package:flutter_fic9_ecommerce_app/presentation/payment/bloc/order_detail/order_detail_bloc.dart';
 import 'package:flutter_fic9_ecommerce_app/presentation/shipping_address/bloc/add_address/add_address_bloc.dart';
 
@@ -66,6 +68,12 @@ class MyApp extends StatelessWidget {
         ),
          BlocProvider(
           create: (context) => GetCostBloc(),
+        ),
+        BlocProvider(
+          create: (context) => BuyerOrderBloc(),
+        ),
+         BlocProvider(
+          create: (context) => CekResiBloc(),
         ),
       ],
       child: MaterialApp(

@@ -12,6 +12,10 @@ class GetCostBloc extends Bloc<GetCostEvent, GetCostState> {
   GetCostBloc() : super(const _Initial()) {
     on<_GetCost>((event, emit) async {
       emit(const _Loading());
+      print('origin: ${event.origin}');
+      print('destination: ${event.destination}');
+      print('courier: ${event.courier}');
+
       final response = await RajaOngkirRemoteDatasource().getCost(
         event.origin,
         event.destination,
